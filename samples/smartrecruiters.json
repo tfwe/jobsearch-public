@@ -1,0 +1,285 @@
+{
+ "offset": 0,
+ "limit": 100,
+ "totalFound": 4567,
+ "content": [
+  {
+   "id": "744000163545151",
+   "name": "Environmental Planner (Contract)",
+   "uuid": "60d7873e-2fbb-41d4-8ec8-53e3fda02371",
+   "jobAdId": "3307e7f2-e8fe-4b18-8aa0-47f9efd046ae",
+   "defaultJobAd": true,
+   "refNumber": "REF93941E",
+   "company": {
+    "identifier": "SGS",
+    "name": "SGS"
+   },
+   "releasedDate": "2026-11-24T20:44:04.219Z",
+   "location": {
+    "city": "Kamloops",
+    "region": "BC",
+    "country": "ca",
+    "address": "British Columbia 1",
+    "remote": false,
+    "hybrid": false,
+    "latitude": "50.6774939",
+    "longitude": "-120.2531202",
+    "fullLocation": "Kamloops, BC, Canada"
+   },
+   "industry": {
+    "id": "oil_and_energy",
+    "label": "Oil And Energy"
+   },
+   "department": {
+    "id": "1382022",
+    "label": "Inspection and Field Testing"
+   },
+   "function": {
+    "id": "other",
+    "label": "Other"
+   },
+   "typeOfEmployment": {
+    "id": "contract",
+    "label": "Contract"
+   },
+   "experienceLevel": {
+    "id": "mid_senior_level",
+    "label": "Mid-Senior Level"
+   },
+   "customField": [
+    {
+     "fieldId": "5dc3f124a1a93b14475b7b4e",
+     "fieldLabel": "Business Line",
+     "valueId": "26f2defb-ad34-4944-9e58-f1b7d7b2602a",
+     "valueLabel": "Industries & Environment (I&E)"
+    },
+    {
+     "fieldId": "COUNTRY",
+     "fieldLabel": "Country/Region",
+     "valueId": "ca",
+     "valueLabel": "Canada"
+    },
+    {
+     "fieldId": "5dc3f05f2074ff54f4ddaefb",
+     "fieldLabel": "Legal Entity",
+     "valueId": "9c549241-2d9c-42d2-ad6c-daa3efc2d04f",
+     "valueLabel": "CA_SGS Canada Inc"
+    },
+    {
+     "fieldId": "5d946e2bd244ea771ed25c0f",
+     "fieldLabel": "Brands",
+     "valueId": "default",
+     "valueLabel": "SGS"
+    },
+    {
+     "fieldId": "5d946e2bd244ea771ed25c10",
+     "fieldLabel": "Department",
+     "valueId": "1382022",
+     "valueLabel": "Inspection and Field Testing"
+    },
+    {
+     "fieldId": "5dc3f156809dca7626e6ccb0",
+     "fieldLabel": "Contract Type",
+     "valueId": "949300c3-4174-4402-b7b5-18d111c2a7c8",
+     "valueLabel": "Standard"
+    }
+   ],
+   "visibility": "PUBLIC",
+   "ref": "https://api.smartrecruiters.com/v1/companies/SGS/postings/744000163545151",
+   "language": {
+    "code": "en",
+    "label": "English",
+    "labelNative": "English (US)"
+   },
+   "unpublishOn": "2026-12-24T06:00:00.000Z"
+  },
+  {
+   "id": "744000163478879",
+   "name": "R&D Scientist - LC/MS",
+   "uuid": "444e31b8-3c71-4bc8-b456-42307e511222",
+   "jobAdId": "2935d683-ebe9-4330-9a6b-7d8bc89262e4",
+   "defaultJobAd": true,
+   "refNumber": "REF93885E",
+   "company": {
+    "identifier": "SGS",
+    "name": "SGS"
+   },
+   "releasedDate": "2026-11-24T14:58:51.088Z",
+   "location": {
+    "city": "Mississauga",
+    "region": "ON",
+    "country": "ca",
+    "address": "6490 Vipond Drive",
+    "postalCode": "L5T 1W8",
+    "remote": false,
+    "hybrid": false,
+    "latitude": "43.6609306",
+    "longitude": "-79.6656051",
+    "fullLocation": "Mississauga, ON, Canada"
+   },
+   "industry": {
+    "id": "pharmaceuticals",
+    "label": "Pharmaceuticals"
+   },
+   "department": {
+    "id": "1382005",
+    "label": "Laboratory & Testing"
+   },
+   "function": {
+    "id": "science",
+    "label": "Science"
+   },
+   "typeOfEmployment": {
+    "id": "permanent",
+    "label": "Full-time"
+   },
+   "experienceLevel": {
+    "id": "mid_senior_level",
+    "label": "Mid-Senior Level"
+   },
+   "customField": [
+    {
+     "fieldId": "5dc3f124a1a93b14475b7b4e",
+     "fieldLabel": "Business Line",
+     "valueId": "cc7a2fc6-2c1e-4f3d-bf15-a245e4467c63",
+     "valueLabel": "Health & Nutrition (H&N)"
+    },
+    {
+     "fieldId": "COUNTRY",
+     "fieldLabel": "Country/Region",
+     "valueId": "ca",
+     "valueLabel": "Canada"
+    },
+    {
+     "fieldId": "5dc3f05f2074ff54f4ddaefb",
+     "fieldLabel": "Legal Entity",
+     "valueId": "9c549241-2d9c-42d2-ad6c-daa3efc2d04f",
+     "valueLabel": "CA_SGS Canada Inc"
+    },
+    {
+     "fieldId": "5d946e2bd244ea771ed25c0f",
+     "fieldLabel": "Brands",
+     "valueId": "default",
+     "valueLabel": "SGS"
+    },
+    {
+     "fieldId": "5d946e2bd244ea771ed25c10",
+     "fieldLabel": "Department",
+     "valueId": "1382005",
+     "valueLabel": "Laboratory & Testing"
+    },
+    {
+     "fieldId": "5dc3f156809dca7626e6ccb0",
+     "fieldLabel": "Contract Type",
+     "valueId": "949300c3-4174-4402-b7b5-18d111c2a7c8",
+     "valueLabel": "Standard"
+    }
+   ],
+   "visibility": "PUBLIC",
+   "ref": "https://api.smartrecruiters.com/v1/companies/SGS/postings/744000163478879",
+   "creator": {
+    "name": "Dana Whitfield"
+   },
+   "language": {
+    "code": "en",
+    "label": "English",
+    "labelNative": "English (US)"
+   },
+   "unpublishOn": "2027-02-22T05:00:00.000Z"
+  },
+  {
+   "id": "744000163547720",
+   "name": "Manager, Biostatistician",
+   "uuid": "24a69c52-48d6-41d2-99bf-a3c2c5ae4fb1",
+   "jobAdId": "0372f9f5-ab43-489c-aacd-b2e9b0ae42af",
+   "defaultJobAd": true,
+   "refNumber": "REF93824G",
+   "company": {
+    "identifier": "SGS",
+    "name": "SGS"
+   },
+   "releasedDate": "2026-11-24T21:18:57.355Z",
+   "location": {
+    "city": "Richardson",
+    "region": "TX",
+    "country": "us",
+    "address": "1801 North Glenville Drive",
+    "postalCode": "75081",
+    "remote": false,
+    "hybrid": false,
+    "latitude": "32.9725523",
+    "longitude": "-96.70700529999999",
+    "fullLocation": "Richardson, TX, United States"
+   },
+   "industry": {
+    "id": "cosmetics",
+    "label": "Cosmetics"
+   },
+   "department": {
+    "id": "1382005",
+    "label": "Laboratory & Testing"
+   },
+   "function": {
+    "id": "science",
+    "label": "Science"
+   },
+   "typeOfEmployment": {
+    "id": "permanent",
+    "label": "Full-time"
+   },
+   "experienceLevel": {
+    "id": "mid_senior_level",
+    "label": "Mid-Senior Level"
+   },
+   "customField": [
+    {
+     "fieldId": "5dc3f05f2074ff54f4ddaefb",
+     "fieldLabel": "Legal Entity",
+     "valueId": "93067acb-a072-473d-a7c3-ed4ae72edd33",
+     "valueLabel": "US_SGS North America Inc."
+    },
+    {
+     "fieldId": "5d946e2bd244ea771ed25c0f",
+     "fieldLabel": "Brands",
+     "valueId": "default",
+     "valueLabel": "SGS"
+    },
+    {
+     "fieldId": "5dc3f124a1a93b14475b7b4e",
+     "fieldLabel": "Business Line",
+     "valueId": "cc7a2fc6-2c1e-4f3d-bf15-a245e4467c63",
+     "valueLabel": "Health & Nutrition (H&N)"
+    },
+    {
+     "fieldId": "5d946e2bd244ea771ed25c10",
+     "fieldLabel": "Department",
+     "valueId": "1382005",
+     "valueLabel": "Laboratory & Testing"
+    },
+    {
+     "fieldId": "5dc3f156809dca7626e6ccb0",
+     "fieldLabel": "Contract Type",
+     "valueId": "949300c3-4174-4402-b7b5-18d111c2a7c8",
+     "valueLabel": "Standard"
+    },
+    {
+     "fieldId": "COUNTRY",
+     "fieldLabel": "Country/Region",
+     "valueId": "us",
+     "valueLabel": "United States"
+    }
+   ],
+   "visibility": "PUBLIC",
+   "ref": "https://api.smartrecruiters.com/v1/companies/SGS/postings/744000163547720",
+   "creator": {
+    "name": "Dana Whitfield"
+   },
+   "language": {
+    "code": "en",
+    "label": "English",
+    "labelNative": "English (US)"
+   },
+   "unpublishOn": "2027-02-22T05:00:00.000Z"
+  }
+ ]
+}

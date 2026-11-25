@@ -1,0 +1,21 @@
+# The board registry: one entry per public ATS board to scan.
+#   verified: true  = probed live and the board returned postings
+#   verified: false = never confirmed (run `python -m jobsearch.cli sources --check`)
+# token = the slug in the ATS URL, e.g. boards-api.greenhouse.io/v1/boards/<token>/jobs
+#
+# None of these has been probed: `verified: false` everywhere means exactly that. They are
+# starter entries, not a curated list: every slug here answers on a public
+# board, but boards expire and companies switch ATS, which 404s the token. `sources
+# --check` re-probes every entry and names the dead ones. Replace them with the boards
+# you actually care about.
+entries:
+  # --- infrastructure and platform ---
+  - {name: Cloudflare,      ats: greenhouse,  token: cloudflare,     tags: [network], verified: false}
+  - {name: Datadog,         ats: greenhouse,  token: datadog,        tags: [observability], verified: false}
+  - {name: GitLab,          ats: greenhouse,  token: gitlab,         tags: [platform], verified: false}
+  - {name: HashiCorp,       ats: greenhouse,  token: hashicorp,      tags: [platform], verified: false}
+  # --- data and AI ---
+  - {name: Anthropic,       ats: greenhouse,  token: anthropic,      tags: [ai], verified: false}
+  - {name: Databricks,      ats: greenhouse,  token: databricks,     tags: [data, ai], verified: false}
+  - {name: Cohere,          ats: ashby,       token: cohere,         tags: [ai, canada], verified: false}
+  - {name: Linear,          ats: ashby,       token: linear,         tags: [product], verified: false}

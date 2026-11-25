@@ -1,0 +1,50 @@
+# Synthetic profile used by the scoring tests. It is not a real person: the tests only
+# need a facts.yaml of the right shape, with the skills and titles they assert on.
+# Replace it with your own facts.yaml to score your own search.
+version: 1
+
+contact:
+  name: "Alex Morgan"
+  location: "Winnipeg, MB"
+  email: "alex.morgan@example.com"
+  phone: "+1 204 555 0143"
+  linkedin_url: "https://www.linkedin.com/in/example-morgan"
+  github_url: "https://github.com/example-morgan"
+
+certifications:
+  - id: sec-analyst
+    name: "Security Analyst Associate"
+    short: "Security Analyst Associate"
+    tokens: ["SA-200"]
+  - id: endpoint-admin
+    name: "Endpoint Administrator"
+    short: "Endpoint Administrator"
+    tokens: ["EA-100"]
+
+employment:
+  - id: example-corp
+    employer: "Example Corp"
+    location: "Ontario, Canada"
+    title: "Security Content Engineer (converted from Support Analyst Co-op)"
+    dates: "08/2024 -- 01/2026"
+  - id: example-retail
+    employer: "Example Retail"
+    location: "Manitoba, Canada"
+    title: "Technical Sales Associate"
+    dates: "03/2023 -- 07/2023"
+
+education:
+  - id: example-uni
+    institution: "Example University"
+    field: "Computer Science"
+
+projects:
+  - id: aurora
+    name: "Aurora Ledger Reconciliation Pipeline"
+    tech: "Python, SQLite, pytest, Pydantic, Docker, Bash, YAML, systemd"
+  - id: beacon
+    name: "Beacon Agent Operations Layer"
+    tech: "Python, PyTorch, Transformers, PEFT, pytest"
+  - id: triage
+    name: "Containerized Log Triage Agent"
+    tech: "Python, Docker, KQL, Sigma, Detection Engineering, PyTorch"

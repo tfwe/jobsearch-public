@@ -1,0 +1,41 @@
+# Generated data: the SQLite store is rebuildable by one `scan` (~68 MB, WAL)
+# The store rebuilds with one `scan`, so it is never committed
+jobsearch.db
+jobsearch.db-wal
+jobsearch.db-shm
+
+# Generated artifacts, rewritten at the end of every scan/rescore
+dashboard.html
+dashboard_phone.png
+dashboard_desktop.png
+last_scan.json
+board_health.json
+
+# Copilot job bundles and answers (staged facts, model output)
+state/
+
+# Cover-letter prose, kept out of version control
+bodies/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# LaTeX build residue
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Local overrides
+.env
+*.local
+
+# Synthetic fixtures built by tools/make_fixture.py
+fixture/

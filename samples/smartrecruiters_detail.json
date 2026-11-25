@@ -1,0 +1,118 @@
+{
+ "id": "744000163545151",
+ "name": "Environmental Planner (Contract)",
+ "uuid": "60d7873e-2fbb-41d4-8ec8-53e3fda02371",
+ "jobId": "d0dab826-15b1-4eb1-bdd4-01a5185d8c05",
+ "jobAdId": "3307e7f2-e8fe-4b18-8aa0-47f9efd046ae",
+ "defaultJobAd": true,
+ "refNumber": "REF93941E",
+ "company": {
+  "name": "SGS",
+  "identifier": "SGS"
+ },
+ "location": {
+  "city": "Kamloops",
+  "region": "BC",
+  "country": "ca",
+  "address": "British Columbia 1",
+  "remote": false,
+  "hybrid": false,
+  "latitude": "50.6774939",
+  "longitude": "-120.2531202",
+  "fullLocation": "Kamloops, BC, Canada"
+ },
+ "customField": [
+  {
+   "fieldId": "5d946e2bd244ea771ed25c10",
+   "fieldLabel": "Department",
+   "valueId": "1382022",
+   "valueLabel": "Inspection and Field Testing"
+  },
+  {
+   "fieldId": "5dc3f156809dca7626e6ccb0",
+   "fieldLabel": "Contract Type",
+   "valueId": "949300c3-4174-4402-b7b5-18d111c2a7c8",
+   "valueLabel": "Standard"
+  },
+  {
+   "fieldId": "COUNTRY",
+   "fieldLabel": "Country/Region",
+   "valueId": "ca",
+   "valueLabel": "Canada"
+  },
+  {
+   "fieldId": "5dc3f05f2074ff54f4ddaefb",
+   "fieldLabel": "Legal Entity",
+   "valueId": "9c549241-2d9c-42d2-ad6c-daa3efc2d04f",
+   "valueLabel": "CA_SGS Canada Inc"
+  },
+  {
+   "fieldId": "5d946e2bd244ea771ed25c0f",
+   "fieldLabel": "Brands",
+   "valueId": "default",
+   "valueLabel": "SGS"
+  },
+  {
+   "fieldId": "5dc3f124a1a93b14475b7b4e",
+   "fieldLabel": "Business Line",
+   "valueId": "26f2defb-ad34-4944-9e58-f1b7d7b2602a",
+   "valueLabel": "Industries & Environment (I&E)"
+  }
+ ],
+ "releasedDate": "2026-11-24T20:44:04.219Z",
+ "creator": {
+  "name": "",
+  "avatarUrl": ""
+ },
+ "postingUrl": "https://jobs.smartrecruiters.com/SGS/744000163545151-environmental-planner-contract-",
+ "applyUrl": "https://jobs.smartrecruiters.com/SGS/744000163545151-environmental-planner-contract-?oga=true",
+ "referralUrl": "https://jobs.smartrecruiters.com/external-referrals/company/SGS/publication/60d7873e-2fbb-41d4-8ec8-53e3fda02371?dcr_ci=SGS",
+ "jobAd": {
+  "sections": {
+   "companyDescription": {
+    "title": "Company Description",
+    "text": "<p>SGS is the world\u2019s leading inspection, verification, testing and certification company. SGS is recognized as the global benchmark for quality and integrity. With more than 93,000 employees, SGS operates a network of over 2,400 offices and laboratories around the world.&#xa0;</p>"
+   },
+   "jobDescription": {
+    "title": "Job Description",
+    "text": "<p><strong>Location:</strong> Kamloops Regional Office, supporting Central BC operations<br>\n<strong>Schedule:</strong>&#xa0;One year contract with possibility of extension, 40 hours per week<br>\n<strong>Reports to:</strong> Team Lead, Environmental Planning</p><p>Our client is seeking an experienced Environmental Planner to join its Environmental Planning team in Kamloops for an anticipated contract of approximately 12 months. You will coordinate and implement environmental planning for operational and maintenance (O&amp;M) projects across the Central BC Region.</p><p>In this role, you will identify potential environmental impacts and facilitate their avoidance, minimization, and mitigation. You will support environmental permitting, develop environmental protection plans, coordinate monitoring and inspections, and work with project teams, regulators, and stakeholders to help ensure compliance with environmental requirements.</p><p><u><strong>Key Responsibilities</strong></u></p><ul><li>Implement environmental planning processes for O&amp;M projects, identify potential impacts, develop environmental protection plans, and communicate mitigation measures and procedures.</li><li>"
+   },
+   "qualifications": {
+    "title": "Qualifications",
+    "text": "<ul><li>B.Sc. in Environmental Sciences or Engineering.</li><li>Environmental Professional (P.Ag, R.P.Bio) credentials preferred.</li><li>6-9 years of relevant experience with pipeline or oilfield application and construction related work.</li><li>Environmental experience with pipeline operations and maintenance or other oilfield experience.</li><li>Understanding of environmental regulation (AB, BC) and application of provincial and federal regulations (CER, DFO, ECCC) specifically relating to permit applications.</li><li>Knowledge of industry best practices for Environmental Protection Plans and associated mitigation measures (e.g. fisheries, soil science, botany, reclamation).</li><li>Field experience including oversight of contractors.</li><li>Strong verbal and written communication skills.</li><li>Strong organization and scheduling skills.</li><li>Strong attention to detail while working in a time-conscious and effective manner.</li><li>Strong verbal and written communication skills with proven ability to work collaboratively with others.</li><li>Strong organizational and scheduling skills.</li><li>Attention to detail while working in a time-conscious and effective manner</li></ul><p><strong><u>Field Work and Travel</u></strong></p><p>"
+   },
+   "additionalInformation": {
+    "title": "Additional Information",
+    "text": "<p>SGS is an Equal Opportunity Employer, and as such we recruit, hire, train, and promote persons in all job classifications without regard to race, color, religion, sex, national origin, disability, age, marital status, sexual orientation, gender identity or expression and Indigenous status, or any other characteristics protected by law.<br>\n<br>\nTo perform this job successfully, an individual must be able to perform each essential duty satisfactorily with or without reasonable accommodations. The requirements listed above are representative of the knowledge, skills, and/or abilities required.<br>\n<br>\nThis job description should not be construed as an exhaustive statement of duties, responsibilities, or requirements, but a general description of the job. Nothing contained herein restricts the company's rights to assign or reassign duties and responsibilities to this job at any time.<br>\n<br>\nAccommodations are available on request for qualified candidates during each stage of the recruitment process.<br>\n<br>\nPlease note that candidates applying for Canadian job openings should be authorized to work in Canada.</p>"
+   }
+  }
+ },
+ "active": true,
+ "visibility": "PUBLIC",
+ "unpublishOn": "2026-12-24T06:00:00.000Z",
+ "industry": {
+  "id": "oil_and_energy",
+  "label": "Oil And Energy"
+ },
+ "function": {
+  "id": "other",
+  "label": "Other"
+ },
+ "department": {
+  "id": 1382022,
+  "label": "Inspection and Field Testing"
+ },
+ "experienceLevel": {
+  "id": "mid_senior_level",
+  "label": "Mid-Senior Level"
+ },
+ "typeOfEmployment": {
+  "id": "contract",
+  "label": "Contract"
+ },
+ "language": {
+  "code": "en",
+  "label": "English",
+  "labelNative": "English (US)"
+ }
+}

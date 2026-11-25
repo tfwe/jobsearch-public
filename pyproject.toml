@@ -1,0 +1,18 @@
+[project]
+name = "jobsearch"
+version = "0.1.0"
+description = "Prep-only job search pipeline: scan boards, score, build packets, render a local dashboard."
+requires-python = ">=3.13"
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pyyaml>=6"]
+
+# Flat layout: the package sits next to tests/, samples/ and the docs, so tell
+# setuptools which directory is the distribution instead of letting it guess.
+[tool.setuptools]
+packages = ["jobsearch"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
