@@ -1,8 +1,8 @@
 # Offline demo walkthrough
 
-This repository can be exercised end to end with no network, no model and no personal data. `tools/make_fixture.py` builds a synthetic SQLite store from the captured board payloads in `samples/`, and everything below runs against it. Every command was run once in a fresh clone and its output is recorded verbatim. Recorded against commit `7b75865`.
+> Back to the main [README](../README.md). Prerequisite: Python 3.13 or later. Use `uv` if it is installed; if not, use `pip` (see [Quick start](../README.md#quick-start)). Recorded against commit `7b75865`.
 
-Two commands are deliberately absent: `python -m jobsearch.cli scan` and `python -m jobsearch.cli sources --check` both need network access. Nothing here fetches anything.
+This repository can be exercised end to end with no network, no model and no personal data. `tools/make_fixture.py` builds a synthetic SQLite store from the captured board payloads in `samples/`, and everything below runs against it. Every command was run once in a fresh clone and its output is recorded verbatim.
 
 ## 1. Run the test suite
 
@@ -18,7 +18,9 @@ Recorded output (summary line; the per-test dots are omitted):
 917 passed in 115.15s (0:01:55)
 ```
 
-On a clone without the PDF toolchain or node, the same command reports 908 passed and 9 skipped. The README's "Quick start" section has the details.
+On a clone without the PDF toolchain or node, the same command reports 908 passed and 9 skipped. The main README's [Quick start](../README.md#quick-start) and [Requirements](../README.md#requirements) sections have the details.
+
+Steps 2 to 6 use bare `python`. Activate the venv first (`source .venv/bin/activate`), or the commands run under the system interpreter.
 
 ## 2. Build the fixture store
 
@@ -94,7 +96,7 @@ score | status | company       | title                                          
 0.0   | new    | Sample Corp   | Customer Success Manager                                             | Orlando, Florida, United States / Atlanta, Georgia, United States / Tampa, Florida, United States | workable:sample:908332A8B3
 ```
 
-`show <uid>` also works offline and prints the full stored posting, including the posting's real source URL from the captured payload; its output is omitted here for that reason.
+The `show <uid>` command is omitted from this walkthrough; see [What the demo does not do](#what-the-demo-does-not-do).
 
 ## 5. Render the dashboard
 
@@ -110,9 +112,9 @@ fixture/dashboard.html
 
 The file is self-contained HTML, written inside `fixture/`, and can be opened directly in a browser.
 
-## 6. Serve it
+## 6. Serve and verify auth
 
-The server requires `JOBSEARCH_SERVE_USER` and `JOBSEARCH_SERVE_PASSWORD` and answers HTTP Basic auth on every request. The values below are throwaway demo credentials; bind to `127.0.0.1`. `COPILOT_NEON_CMD` points the copilot worker at the stub model CLI from the repository, so no model and no API key is involved.
+The server requires `JOBSEARCH_SERVE_USER` and `JOBSEARCH_SERVE_PASSWORD` and answers HTTP Basic auth on every request. It exits 78 if either variable is unset. The values below are throwaway demo credentials; bind to `127.0.0.1`. `COPILOT_NEON_CMD` points at `tools/stub-model-cli.sh` so the copilot actions in the served UI run offline, with no model and no API key.
 
 ```sh
 export COPILOT_NEON_CMD="$PWD/tools/stub-model-cli.sh"
@@ -168,7 +170,8 @@ Stop the server with Ctrl-C. It writes nothing; the only files the demo created 
 
 ## What the demo does not do
 
-- It never runs `scan` or `sources --check`. Both fetch from the network.
+- Two commands are deliberately absent: `python -m jobsearch.cli scan` and `python -m jobsearch.cli sources --check` both need network access. Nothing here fetches anything. The demo never runs either command.
+- `show <uid>` also works offline and prints the full stored posting, including the posting's real source URL from the captured payload; its output is omitted here for that reason.
 - It writes nothing outside `fixture/` (and `.venv/` if you created it).
 - It prepares nothing, applies to nothing and sends nothing. That is the pipeline's own rule, not just the demo's: every output is a local file for a person to read.
-- The fixture holds nine synthetic postings built from the captured public payloads in `samples/`. No profile, packet, letter or store from the private deployment is in this repository; see "What is not in this repository" in the main README.
+- The fixture holds nine synthetic postings built from the captured public payloads in `samples/`. No profile, packet, letter or store from the private deployment is in this repository; see [What is not in this repository](../README.md#what-is-not-in-this-repository) in the main README.
