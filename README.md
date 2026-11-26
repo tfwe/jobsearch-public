@@ -74,7 +74,7 @@ It writes the answer to stdout and, per stage, a `# stage NAME start` line and a
 export COPILOT_NEON_CMD="$PWD/tools/stub-model-cli.sh"
 ```
 
-**Fixture store.** `tools/make_fixture.py` builds a SQLite store from the captured board payloads in `samples/`. It runs the repository's own fetch and normalise code, with the single network call replaced by the captured bytes. The output is deterministic:
+**Fixture store.** `tools/make_fixture.py` builds a SQLite store from the captured board payloads in `samples/`. It runs the repository's own fetch and normalise code, with the single network call replaced by the captured bytes. The output is deterministic. A recorded end-to-end walkthrough over the fixture lives in [demo/README.md](demo/README.md):
 
 ```sh
 python tools/make_fixture.py            # writes fixture/jobsearch-fixture.db
