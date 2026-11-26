@@ -1,0 +1,130 @@
+# producing tool: tools/record_traces.py section A (reach gate, real server)
+# reproduce: python tools/build_demo_corpus.py && python tools/record_traces.py
+# counts: postings=120 http_409=40 http_200=80 classify_mismatch=0
+# direct classify split: in_reach=40, out_of_reach=40, stretch=40
+# Section A: reach gate. One line per posting, in corpus order.
+# columns: HTTP status, reach verdict in the response body (- when none), reach.classify verdict, uid, title
+HTTP 200 body=- direct=in_reach uid=greenhouse:corpus:0001 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=lever:corpus:0002 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=ashby:corpus:0003 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=workable:corpus:0004 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=smartrecruiters:corpus:0005 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remotive:corpus:0006 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=remoteok:corpus:0007 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=arbeitnow:corpus:0008 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=greenhouse:corpus:0009 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=lever:corpus:0010 title=Python Developer
+HTTP 200 body=- direct=stretch uid=ashby:corpus:0011 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=workable:corpus:0012 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=smartrecruiters:corpus:0013 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=remotive:corpus:0014 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remoteok:corpus:0015 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=arbeitnow:corpus:0016 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=greenhouse:corpus:0017 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=lever:corpus:0018 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=ashby:corpus:0019 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=workable:corpus:0020 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=smartrecruiters:corpus:0021 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=remotive:corpus:0022 title=Python Developer
+HTTP 200 body=- direct=stretch uid=remoteok:corpus:0023 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=arbeitnow:corpus:0024 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=greenhouse:corpus:0025 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=lever:corpus:0026 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=ashby:corpus:0027 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=workable:corpus:0028 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=smartrecruiters:corpus:0029 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remotive:corpus:0030 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=remoteok:corpus:0031 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=arbeitnow:corpus:0032 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=greenhouse:corpus:0033 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=lever:corpus:0034 title=Python Developer
+HTTP 200 body=- direct=stretch uid=ashby:corpus:0035 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=workable:corpus:0036 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=smartrecruiters:corpus:0037 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=remotive:corpus:0038 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remoteok:corpus:0039 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=arbeitnow:corpus:0040 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=greenhouse:corpus:0041 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=lever:corpus:0042 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=ashby:corpus:0043 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=workable:corpus:0044 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=smartrecruiters:corpus:0045 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=remotive:corpus:0046 title=Python Developer
+HTTP 200 body=- direct=stretch uid=remoteok:corpus:0047 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=arbeitnow:corpus:0048 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=greenhouse:corpus:0049 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=lever:corpus:0050 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=ashby:corpus:0051 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=workable:corpus:0052 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=smartrecruiters:corpus:0053 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remotive:corpus:0054 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=remoteok:corpus:0055 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=arbeitnow:corpus:0056 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=greenhouse:corpus:0057 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=lever:corpus:0058 title=Python Developer
+HTTP 200 body=- direct=stretch uid=ashby:corpus:0059 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=workable:corpus:0060 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=smartrecruiters:corpus:0061 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=remotive:corpus:0062 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remoteok:corpus:0063 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=arbeitnow:corpus:0064 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=greenhouse:corpus:0065 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=lever:corpus:0066 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=ashby:corpus:0067 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=workable:corpus:0068 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=smartrecruiters:corpus:0069 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=remotive:corpus:0070 title=Python Developer
+HTTP 200 body=- direct=stretch uid=remoteok:corpus:0071 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=arbeitnow:corpus:0072 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=greenhouse:corpus:0073 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=lever:corpus:0074 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=ashby:corpus:0075 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=workable:corpus:0076 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=smartrecruiters:corpus:0077 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remotive:corpus:0078 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=remoteok:corpus:0079 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=arbeitnow:corpus:0080 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=greenhouse:corpus:0081 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=lever:corpus:0082 title=Python Developer
+HTTP 200 body=- direct=stretch uid=ashby:corpus:0083 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=workable:corpus:0084 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=smartrecruiters:corpus:0085 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=remotive:corpus:0086 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remoteok:corpus:0087 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=arbeitnow:corpus:0088 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=greenhouse:corpus:0089 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=lever:corpus:0090 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=ashby:corpus:0091 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=workable:corpus:0092 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=smartrecruiters:corpus:0093 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=remotive:corpus:0094 title=Python Developer
+HTTP 200 body=- direct=stretch uid=remoteok:corpus:0095 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=arbeitnow:corpus:0096 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=greenhouse:corpus:0097 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=lever:corpus:0098 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=ashby:corpus:0099 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=workable:corpus:0100 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=smartrecruiters:corpus:0101 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remotive:corpus:0102 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=remoteok:corpus:0103 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=arbeitnow:corpus:0104 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=greenhouse:corpus:0105 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=lever:corpus:0106 title=Python Developer
+HTTP 200 body=- direct=stretch uid=ashby:corpus:0107 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=workable:corpus:0108 title=Software Developer
+HTTP 200 body=- direct=in_reach uid=smartrecruiters:corpus:0109 title=Junior Security Analyst
+HTTP 200 body=- direct=stretch uid=remotive:corpus:0110 title=Senior Python Developer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=remoteok:corpus:0111 title=Staff Software Engineer
+HTTP 200 body=- direct=in_reach uid=arbeitnow:corpus:0112 title=Software Engineering Intern
+HTTP 200 body=- direct=stretch uid=greenhouse:corpus:0113 title=Sr. Data Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=lever:corpus:0114 title=Engineering Manager
+HTTP 200 body=- direct=in_reach uid=ashby:corpus:0115 title=Entry-Level Data Analyst
+HTTP 200 body=- direct=stretch uid=workable:corpus:0116 title=Support Engineer
+HTTP 409 body=out_of_reach direct=out_of_reach uid=smartrecruiters:corpus:0117 title=Principal Data Engineer
+HTTP 200 body=- direct=in_reach uid=remotive:corpus:0118 title=Python Developer
+HTTP 200 body=- direct=stretch uid=remoteok:corpus:0119 title=Security Analyst
+HTTP 409 body=out_of_reach direct=out_of_reach uid=arbeitnow:corpus:0120 title=Software Developer
+# queued analysis jobs after the loop, by final state: done=80
+# force=1 on one out-of-reach posting, followed to its end state
+forced HTTP 200 uid=ashby:corpus:0003 title=Staff Software Engineer
+forced job state=done blocker=- kind=analysis stages=model artifact=analysis.md error=-

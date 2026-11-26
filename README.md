@@ -39,6 +39,15 @@ The fixture build reports 9 postings written.
 
 **For the full recorded walkthrough over this fixture, see [demo/README.md](demo/README.md).**
 
+The repository also includes a synthetic corpus of 120 postings, built by `tools/build_demo_corpus.py`, and traces recorded against it by `tools/record_traces.py`. The builder makes no network calls, and the trace recorder talks only to a local server on 127.0.0.1. Run both from the repo root:
+
+```sh
+python tools/build_demo_corpus.py   # writes demo/corpus/corpus.json
+python tools/record_traces.py       # writes the trace files and SHA256SUMS in demo/corpus/
+```
+
+The generated files and the recorded traces are in [demo/corpus/](demo/corpus/). Section 7 of [demo/README.md](demo/README.md) describes them.
+
 Then, from the repository root:
 
 ```sh
@@ -138,8 +147,8 @@ export COPILOT_NEON_CMD="$PWD/tools/stub-model-cli.sh"
 | `jobsearch/` | The package: eighteen modules, grouped by layer.<br>Ingest and registry: `sources`, `registry`<br>Store: `store`<br>Scoring and gates: `match`, `reach`<br>Model and facts: `copilot`, `facts_ops`, `analysis_findings`<br>Packets and output: `letter`, `workspace`, `staleness`, `dashboard`<br>Web UI and entry points: `cli`, `serve`, `triage`, `ui`, `checks`, `__init__` |
 | `tests/` | Sixteen test modules, including the offline dispatch tests, with `conftest.py` and a synthetic `fixture_facts.yaml` |
 | `samples/` | Nine captured board payloads used by the fixture builder |
-| `tools/` | `stub-model-cli.sh` (stand-in model CLI) and `make_fixture.py` (offline store builder) |
-| `demo/` | `README.md`, the recorded offline walkthrough over the fixture |
+| `tools/` | `stub-model-cli.sh` (stand-in model CLI), `make_fixture.py` (offline store builder), `build_demo_corpus.py` (synthetic 120-posting corpus builder), and `record_traces.py` (recorded reach and validator traces) |
+| `demo/` | `README.md`, the recorded offline walkthrough over the fixture, and `corpus/`, the synthetic 120-posting corpus with recorded traces and `SHA256SUMS` |
 | `companies.yaml` | Starter board registry: eight entries, none probed yet |
 | `pyproject.toml` | Package metadata, the PyYAML dependency and the `dev` extra |
 | `.github/workflows/` | CI: runs the test suite on every push |

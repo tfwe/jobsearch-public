@@ -1,0 +1,14 @@
+# producing tool: tools/record_traces.py section B (copilot.validate)
+# reproduce: python tools/record_traces.py
+# counts: cases=9 ok=3 failed=6 seeded_rule_hits=6/6
+# Section B: copilot.validate. Facts from tests/fixture_facts.yaml.
+# columns: kind, case, ok, problems (JSON list)
+kind=letter case=stub-canned-letter ok=True problems=[]
+kind=analysis case=stub-canned-analysis ok=True problems=[]
+kind=questions case=stub-canned-questions ok=True problems=[]
+kind=letter case=seed-unverified_metric ok=False problems=["unverified_metric=63%"]
+kind=letter case=seed-project_proper_noun ok=False problems=["project_proper_noun=Aurora Ledger Reconciliation Pipeline"]
+kind=letter case=seed-non_ascii ok=False problems=["non_ascii"]
+kind=letter case=seed-FRENCH_BLOCKER ok=False problems=["FRENCH_BLOCKER"]
+kind=letter case=seed-greeting ok=False problems=["greeting"]
+kind=letter case=seed-code_tokens ok=False problems=["code_tokens"]
