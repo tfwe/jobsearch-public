@@ -1,6 +1,6 @@
 # Offline demo walkthrough
 
-> Back to the main [README](../README.md). Prerequisite: Python 3.13 or later. Use `uv` if it is installed; if not, use `pip` (see [Quick start](../README.md#quick-start)). Recorded against commit `a03ef6f`.
+> Back to the main [README](../README.md). Prerequisite: Python 3.13 or later. Use `uv` if it is installed; if not, use `pip` (see [Quick start](../README.md#quick-start)). Recorded against commit `a03ef6f` ([full SHA](https://github.com/tfwe/jobsearch-public/commit/a03ef6ff8a07d1d8cdbfee842fd91237d52151de) `a03ef6ff8a07d1d8cdbfee842fd91237d52151de`). Note the known SHA lag: `a03ef6f` is the last commit that changed the demo commands or the recorded outputs; this README lives in later, docs-only commits (the ref was last set at `07f3c4c`, which changed only this line), so the recorded-against ref always lags the tree's HEAD by design. If a commit after `a03ef6f` touches `tools/`, `tests/`, or `demo/corpus/`, the recorded outputs must be re-run and this ref bumped.
 
 This repository can be exercised end to end with no network, no model and no personal data. `tools/make_fixture.py` builds a synthetic SQLite store from the captured board payloads in `samples/` plus the synthetic corpus in `demo/corpus/`, scores every posting against the synthetic profile in `tests/fixture_facts.yaml`, and everything below runs against it. Every command was run once in a fresh clone and its output is recorded verbatim.
 
