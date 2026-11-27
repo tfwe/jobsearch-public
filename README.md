@@ -35,7 +35,7 @@ python tools/make_fixture.py            # writes fixture/jobsearch-fixture.db
 JOBS_DB=fixture/jobsearch-fixture.db python -m jobsearch.cli stats
 ```
 
-The fixture build reports 9 postings written.
+The fixture build reports 9 postings written from the captured payloads, adds the 120-posting corpus from `demo/corpus/`, and scores all 129 rows against the synthetic profile in `tests/fixture_facts.yaml` — the demo walkthrough over it records differentiated non-zero scores.
 
 **For the full recorded walkthrough over this fixture, see [demo/README.md](demo/README.md).**
 

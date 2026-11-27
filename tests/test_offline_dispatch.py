@@ -26,8 +26,9 @@ ROOT = Path(__file__).resolve().parents[1]
 STUB = ROOT / "tools" / "stub-model-cli.sh"
 MAKE_FIXTURE = ROOT / "tools" / "make_fixture.py"
 
-# One posting per captured board payload, plus the second smartrecruiters record.
-EXPECTED_FIXTURE_ROWS = 9
+# One posting per captured board payload, plus the second smartrecruiters record, plus
+# the 120-posting synthetic corpus that make_fixture adds from demo/corpus/corpus.json.
+EXPECTED_FIXTURE_ROWS = 129
 
 USER = "tester"
 PASSWORD = "not-a-real-password"
@@ -93,6 +94,19 @@ def test_fixture_builder_writes_a_store_from_the_captured_payloads(tmp_path):
         store.close()
     assert len(rows) == EXPECTED_FIXTURE_ROWS
     assert all(r["uid"] and r["title"] for r in rows)
+    # Every row is scored by the same pass `rescore` runs, and the corpus rows score
+    # differentiated non-zero values against tests/fixture_facts.yaml.
+    store = Store(str(out))
+    try:
+        scored, positive = store._conn.execute(
+            "SELECT SUM(score IS NOT NULL), SUM(score > 0) FROM postings").fetchone()
+        distinct = store._conn.execute(
+            "SELECT COUNT(DISTINCT score) FROM postings WHERE score > 0").fetchone()[0]
+    finally:
+        store.close()
+    assert scored == EXPECTED_FIXTURE_ROWS
+    assert positive > 0
+    assert distinct > 1
 
 
 def test_a_worker_dispatches_a_job_to_the_stub_cli(tmp_path, tree):

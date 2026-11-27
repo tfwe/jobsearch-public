@@ -4,11 +4,16 @@
 Each sample is a response body captured from one public board. The fixture replays those
 bodies through the repository's own parse-and-normalise path by replacing the single
 network call the fetch layer makes (sources._get_json), so what lands in the store is
-exactly what a live scan would have written from the same bytes.
+exactly what a live scan would have written from the same bytes. The synthetic corpus in
+demo/corpus/ (built by tools/build_demo_corpus.py) is added on top, so the store has
+in-scope postings to rank. Every stored row is then scored by the same pass `rescore`
+runs, against the synthetic profile in tests/fixture_facts.yaml -- the same file the
+scoring tests use.
 
     python tools/make_fixture.py [out.db]      # default: fixture/jobsearch-fixture.db
 
-Deterministic: same samples in, same rows out. No network, no API key.
+Deterministic: same samples in, same rows out. No network, no API key, and no dependency
+on the machine's own profile or preferences files.
 """
 from __future__ import annotations
 
@@ -20,10 +25,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from jobsearch import sources  # noqa: E402
+from jobsearch import match, sources  # noqa: E402
+from jobsearch import store as store_module  # noqa: E402
 from jobsearch.store import Store  # noqa: E402
 
 SAMPLES = ROOT / "samples"
+CORPUS = ROOT / "demo" / "corpus" / "corpus.json"
 DEFAULT_OUT = ROOT / "fixture" / "jobsearch-fixture.db"
 
 # (payload, second payload, fetch call). Each sample file holds one captured record; the
@@ -73,6 +80,12 @@ def build(out_path: Path, quiet: bool = False) -> int:
 
     store = Store(str(out_path))
     real_get_json = sources._get_json
+    # Pin the clock: _now() stamps last_seen/first_seen at second resolution, so an unpinned
+    # build differs whenever two runs straddle a second boundary. One fixed instant makes two
+    # runs byte-identical no matter when they run; staleness is a wall-clock property of the
+    # real pipeline and is intentionally frozen here.
+    real_now = store_module._now
+    store_module._now = lambda: "2026-11-01T00:00:00+00:00"
     inserted = 0
     try:
         for name, detail_name, shape, call in REPLAY:
@@ -87,8 +100,31 @@ def build(out_path: Path, quiet: bool = False) -> int:
             inserted += new
             if not quiet:
                 print(f"{name:28s} {len(postings):4d} parsed {new:4d} new {updated:4d} refreshed")
+
+        corpus = json.loads(CORPUS.read_text(encoding="utf-8"))["postings"]
+        new, updated = store.upsert_postings(corpus)
+        inserted += new
+        if not quiet:
+            print(f"{'corpus.json':28s} {len(corpus):4d} parsed {new:4d} new {updated:4d} refreshed")
+
+        # The same pass `rescore` runs, against the synthetic profile the tests use. The
+        # preferences are loaded from a path that does not exist, which yields the empty
+        # defaults: the demo's numbers must not depend on the machine's own preferences.yaml.
+        profile = match.load_profile(str(ROOT / "tests" / "fixture_facts.yaml"))
+        prefs = match.load_preferences(str(ROOT / "tests" / "no-preferences-here.yaml"))
+        rows = store.list(limit=-1)
+        positive = 0
+        for row in rows:
+            score, variant, reasons = match.score_posting(row, profile, prefs=prefs)
+            store.set_score(row["uid"], score, variant, reasons)
+            if score > 0:
+                positive += 1
+        if not quiet:
+            print(f"scored {len(rows):4d} postings against tests/fixture_facts.yaml "
+                  f"({positive} above 0.0)")
     finally:
         sources._get_json = real_get_json
+        store_module._now = real_now
         store.close()
     if not quiet:
         print(f"{str(out_path):28s} {inserted:4d} postings written")
