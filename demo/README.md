@@ -1,6 +1,6 @@
 # Offline demo walkthrough
 
-> Back to the main [README](../README.md). Prerequisite: Python 3.13 or later. Use `uv` if it is installed; if not, use `pip` (see [Quick start](../README.md#quick-start)). Recorded against commit `7b75865`.
+> Back to the main [README](../README.md). Prerequisite: Python 3.13 or later. Use `uv` if it is installed; if not, use `pip` (see [Quick start](../README.md#quick-start)). Recorded against commit `a03ef6f`.
 
 This repository can be exercised end to end with no network, no model and no personal data. `tools/make_fixture.py` builds a synthetic SQLite store from the captured board payloads in `samples/` plus the synthetic corpus in `demo/corpus/`, scores every posting against the synthetic profile in `tests/fixture_facts.yaml`, and everything below runs against it. Every command was run once in a fresh clone and its output is recorded verbatim.
 
